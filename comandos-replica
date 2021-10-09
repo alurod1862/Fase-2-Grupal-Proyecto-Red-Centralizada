@@ -1,0 +1,11 @@
+#Para ver Servicios
+Get-Windowsfeature
+#Instalar AD-Service
+Install-WindowsFeature -name AD-Domain-Services,DNS -IncludeManagementTools 
+#Para ver comandos
+Get-Command -module ADDSDeployment
+#
+
+#
+
+#
