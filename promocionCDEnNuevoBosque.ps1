@@ -5,10 +5,9 @@ PS C:\> Install-ADDSDomainController `
 -InstallDNS:$true `
 -NoGlobalCatalog:$false `
 -CreateDNSDelegation:$false `
--ReplicationSourceDC "master-upv-es-r.upv.es" `
+-ReplicationSourceDC "master-upv-es.upv.es" `
 -CriticalReplicationOnly:$false `
 -DatabasePath "C:\Windows\NTDS" `
 -LogPath "C:\Windows\NTDS" `
--NoRebootOnCompletion:$false `
 -SysvolPath "C:\Windows\SYSVOL" `
 -Force:$true
