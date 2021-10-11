@@ -3,7 +3,7 @@
 #cambiar el nombre del server principal por
 Rename-Computer -NewName master-campus-upv
 
-#ver si es tipo y tamañao de las particiones 
+#ver si es tipo y tamaño de las particiones 
 diskpart
 list disk
 
