@@ -14,6 +14,12 @@ Param(
 Write-Host "Los parámetros son:"$Param1 " " $Param2
 pause
 
+#Función 1. Promocionar a CD
+function promocionarCD
+{
+Write-Host "Ejecuto el comando CD"
+}
+
 #Función que nos muestra un menú por pantalla con 3 opciones y una última para salir del mismo
 # La función “mostrarMenu”, puede tomar como parámetro un título y devolverá por pantalla 
 # "================ $Titulo================" , donde $Titulo será el título pasado por parámetro.
@@ -31,10 +37,11 @@ function mostrarMenu
      Write-Host "1) Primera Opción" 
      Write-Host "2) Segunda Opción" 
      Write-Host "3) Tercera Opción" 
-     Write-Host "4) Tercera Opción"     
-     Write-Host "5) Tercera Opción"     
-     Write-Host "6) Tercera Opción"     
-     Write-Host "7) Tercera Opción"
+     Write-Host "4) Cuarta Opción"     
+     Write-Host "5) Quinta Opción"     
+     Write-Host "6) Sexta Opción"     
+     Write-Host "7) Séptima Opción"
+     Write-Host "8) Tercera Opción"
      Write-Host "S) Presiona 'S' para salir" 
 }
 #Bucle principal del Script. El bucle se ejecuta de manera infinita hasta que se cumple
@@ -59,6 +66,26 @@ do
            } '3' { 
                 Clear-Host  
                 'Tercera Opción' 
+                pause
+           } '4' { 
+                Clear-Host  
+                'Cuarta Opción' 
+                pause
+           } '5' { 
+                Clear-Host  
+                'Quinta Opción' 
+                pause
+           } '6' { 
+                Clear-Host  
+                'Sexta Opción' 
+                pause
+           } '7' { 
+                Clear-Host  
+                'Séptima Opción' 
+                pause
+           } '8' { 
+                Clear-Host  
+                'Octava Opción' 
                 pause
            } 's' {
                 'Saliendo del script...'
