@@ -4,8 +4,25 @@ Get-Windowsfeature
 Install-WindowsFeature -name AD-Domain-Services,DNS -IncludeManagementTools 
 #Para ver comandos
 Get-Command -module ADDSDeployment
-#
 
-#
+#Puesta en marcha del controlador adicional Server Coreç
 
-#
+#Importar el módulo de PowerShell que nos permite administrar el servidor.
+Import-Module ServerManager
+#Instalar las características de los servicios de directorio.
+Add-WindowsFeature AD-Domain-Services
+#Importar el módulo que nos permitirá instalar el directorio activo.
+Import-Module ADDSDeployment
+
+#Powershell
+
+#Para saber el adaptador
+Get-NetAdapter
+#Para asignar ip
+New-NetIPAddress -InterfaceIndex “4” -IPAddress  “192.168.1.201” -PrefixLength “24” -DefaultGateway “192.168.1.201”
+#DNS
+Set-DNSClientServerAddress –InterfaceIndex “12” -ServerAddresses “8.8.8.8”
+#Cambiar nombre pc
+Rename-Computer -NewName "orion-master" -Restart
+#Comprobar/verificar el estado de una relación de confianza entre dominios,
+netdom trust nombreDeDominioQueConfía /d:nombreDeDominioDeConfianza /verify
