@@ -5,7 +5,7 @@ Install-WindowsFeature -name AD-Domain-Services,DNS -IncludeManagementTools
 #Para ver comandos
 Get-Command -module ADDSDeployment
 
-#Puesta en marcha del controlador adicional Server Coreç
+#Puesta en marcha del controlador adicional Server Core
 
 #Importar el módulo de PowerShell que nos permite administrar el servidor.
 Import-Module ServerManager
@@ -13,6 +13,12 @@ Import-Module ServerManager
 Add-WindowsFeature AD-Domain-Services
 #Importar el módulo que nos permitirá instalar el directorio activo.
 Import-Module ADDSDeployment
+#Comprobar replica
+dsquery user -name *
+#Forzar replica
+repadmin /replsum * /bysrc /bydest /sort:delta
+#Para saber en que servidor estoy conectado
+echo %logonserver%
 
 #Powershell
 
