@@ -11,7 +11,7 @@ list disk
 net user
 
 #cambiar contraseña de usuario 
-net user admin *
+net user WDAGUtilityAcccount *
 
 #DNS
 
