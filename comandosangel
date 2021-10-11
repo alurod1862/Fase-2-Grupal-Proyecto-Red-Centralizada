@@ -1,3 +1,5 @@
+#poner en powershell
+
 #cambiar el nombre del server principal por
 Rename-Computer -NewName master-campus-upv
 
