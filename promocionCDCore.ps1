@@ -16,6 +16,5 @@ Install-ADDSForest `
 -ForestMode "Default" `
 -InstallDns:$True `
 -LogPath "C:\Windows\NTDS" `
--NoRebootOnCompletion:$False `
 -SysvolPath "C:\Windows\SYSVOL" `
 -Force:$true
