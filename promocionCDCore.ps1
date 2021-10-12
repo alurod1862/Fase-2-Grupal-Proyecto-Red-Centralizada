@@ -5,7 +5,7 @@
 $dominioFQDN = "upv.es"
 $dominioNETBIOS = "upv"
 $adminPass = "Hola01"
-#Import-Module ADDSDeployment
+Import-Module ADDSDeployment
 Install-ADDSForest `
 -CreateDnsDelegation:$False `
 -DatabasePath "C:\Windows\NTDS" `
